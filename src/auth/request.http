@@ -1,0 +1,22 @@
+###Sign up User
+POST  http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "user_name":"Esther John",
+    "email":"test123@gmail.com",
+    "password":"helloworld"
+}
+
+###Sign in User
+POST  http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "user_name":"Jesse Amos",
+    "email":"test@gmail.com",
+    "password":"helloworld"
+}
+
+GET http://localhost:3000/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiSmVzc2UgQW1vcyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3MzQ3OTQ5MjgsImV4cCI6MTczNDgxMjkyOH0.igWM59h9eabqc5r9E7V65l3Hkzv9B5a3oo9IYvQcFpw

@@ -1,0 +1,11 @@
+###Fetch USer Data
+GET  http://localhost:3000/users/1
+
+###Update a user Data
+PATCH  http://localhost:3000/users/update-profile/3
+Content-Type: application/json
+
+{
+    "user_name":"Daniel Amos",
+    "email":"test123@gmail.com"
+}

@@ -1,0 +1,39 @@
+###CREATE ARTIST 
+POST http://localhost:3000/artist/create
+Content-Type: application/json
+
+{
+    "name":"Boyhood",
+    "bio":"hood nigga shit",
+    "genres":["trap","afro rap","emo rap"],
+    "image":"https://image.jpg",
+    "social_link":{
+        "x":"https://x.com/boyhood",
+        "instagram":"https://instagram.com/boyhood",
+        "facebook":"https://facebook.com/boyhood"
+    }
+
+}
+
+#### LIST ALL THE ARTIST
+GET http://localhost:3000/artist
+
+### Update ARTIST Information
+PATCH  http://localhost:3000/artist/1
+Content-Type: application/json
+
+{
+    "name":"Emdyssv4 (Hood man)",
+    "bio":"hood nigga crazy,all i want to do is trap",
+    "genres":["trap","afro rap","emo rap"],
+    "image":"https://image.jpg",
+    "social_link":{
+        "x":"https://x.com/boyhood",
+        "instagram":"https://instagram.com/boyhood",
+        "facebook":"https://facebook.com/boyhood"
+    }
+
+}
+
+### DELETE AN ARTIST
+DELETE http://localhost:3000/artist/1

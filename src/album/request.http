@@ -1,0 +1,31 @@
+###Create Albums
+POST http://localhost:3000/album?artist=Boyhood
+Content-Type: application/json
+
+{
+"title":"Hood Season",
+"genres":["hiphop","trap"],
+"release_date":"2023-23-14",
+"cover_image":"http://album_image.jpg",
+"track_list":["love scars","man of the hood"]
+
+}
+
+###GET ALL THE ABLUMS 
+GET http://localhost:3000/album
+
+### Update album Information
+PATCH  http://localhost:3000/album/1
+Content-Type: application/json
+
+{
+"title":"G.O.A.T(Big Capalord)",
+"genres":["hiphop","trap"],
+"release_date":"2023-23-14",
+"cover_image":"http://album_image.jpg",
+"track_list":["love scars","man of the hood"]
+
+}
+
+### DELETE AN album
+DELETE http://localhost:3000/album/1
