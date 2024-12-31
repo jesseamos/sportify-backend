@@ -1,5 +1,6 @@
 import { Albums } from "src/album/entity/album.entity";
 import { Artist } from "src/artist/entity/artist.entity";
+import { Playlist } from "src/playlist/entity/playlist.entity";
 import { Column, Entity, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -28,5 +29,8 @@ export class Track {
 
     @Column()
     explicit: boolean
+
+    @ManyToMany(() => Playlist, (playlist) => playlist.track_list)
+    playlist: Playlist[]
 
 }

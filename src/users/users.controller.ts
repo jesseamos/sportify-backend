@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Patch, UseGuards } from '@nestjs/common';
+import { Body, Controller, forwardRef, Get, Inject, Param, Patch, UseGuards } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Serialize } from 'src/interceptors/custom.interceptors';
 import { UserDto } from 'src/auth/dtos/user.dto';
@@ -6,10 +6,13 @@ import { AuthGuard } from 'src/auth/guards/auth.guards';
 import { UpdateUserDto } from './dtos/update-user.dto';
 
 
+
 @Controller('users')
 @Serialize(UserDto)
 export class UsersController {
-    constructor(private usersService: UsersService) { }
+    constructor(
+        private usersService: UsersService
+    ) { }
 
     @UseGuards(AuthGuard)
     @Get('/:id')

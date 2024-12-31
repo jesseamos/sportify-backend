@@ -8,11 +8,12 @@ import { ArtistModule } from 'src/artist/artist.module';
 
 @Module({
   imports: [
-    ArtistModule
+    TypeOrmModule.forFeature([Track])
+    , ArtistModule
     , AlbumModule
-    , TypeOrmModule.forFeature([Track])
   ],
   controllers: [TrackController],
-  providers: [TrackService]
+  providers: [TrackService],
+  exports: [TrackService]
 })
 export class TrackModule { }

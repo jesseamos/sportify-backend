@@ -11,20 +11,23 @@ import { TrackModule } from './track/track.module';
 import { Artist } from './artist/entity/artist.entity';
 import { Albums } from './album/entity/album.entity';
 import { Track } from './track/entity/track.entity';
+import { PlaylistModule } from './playlist/playlist.module';
+import { Playlist } from './playlist/entity/playlist.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: "sqlite",
       database: "db.sqlite",
-      entities: [User, Artist, Albums, Track],
+      entities: [User, Artist, Albums, Track, Playlist],
       synchronize: true
     }),
     AuthModule,
     UsersModule,
     ArtistModule,
     AlbumModule,
-    TrackModule
+    TrackModule,
+    PlaylistModule
   ],
   controllers: [AppController],
   providers: [AppService],

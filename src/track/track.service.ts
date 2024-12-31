@@ -33,6 +33,15 @@ export class TrackService {
         await this.repo.update(id, body)
 
     }
+
+    async findByTitle(title: string) {
+        const track = await this.repo.findBy({ title })
+        if (!track) {
+            throw new NotFoundException("can't find track with title:" + title)
+        }
+        return track
+    }
+
     async delete(id: string) {
         const [track] = await this.repo.findBy({ id: parseInt(id) })
         if (!track) {

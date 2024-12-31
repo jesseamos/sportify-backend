@@ -13,10 +13,11 @@ POST  http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-    "user_name":"Jesse Amos",
-    "email":"test@gmail.com",
+    "user_name":"Esther John",
+    "email":"test123@gmail.com",
     "password":"helloworld"
 }
 
+####GET USER PROFILE
 GET http://localhost:3000/auth/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiSmVzc2UgQW1vcyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3MzQ3OTQ5MjgsImV4cCI6MTczNDgxMjkyOH0.igWM59h9eabqc5r9E7V65l3Hkzv9B5a3oo9IYvQcFpw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiRXN0aGVyIEpvaG4iLCJlbWFpbCI6InRlc3QxMjNAZ21haWwuY29tIiwiaWF0IjoxNzM1NTU1Mjc1LCJleHAiOjE3MzU1NzMyNzV9.rHI4NpyZDXtuQdFm1CvatzhJVsSie2dtrnEq6_j9KTI
